@@ -5,9 +5,9 @@ function SignUp() {
   return (
     <>
       <div className="login-body">
-        <h1>I am trying this</h1>
-        <div className="sign-up-form">
+        <div className="sign-up-form card">
           <form action="">
+            <h1 className="login">Sign Up</h1>
             <input type="text" placeholder="First Name" required />
           </form>
         </div>

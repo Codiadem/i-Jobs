@@ -8,10 +8,9 @@ function Login() {
     <>
       <div className="login-body">
         <div className="box">
-          <div className="boxes"></div>
           <div className="card boxes">
-            <h1 className="login">Login</h1>
             <form action="">
+              <h1 className="login">Login</h1>
               <div className="login-input">
                 <input type="email" placeholder="Email" required />
                 <input type="text" placeholder="Password" required />
@@ -24,7 +23,6 @@ function Login() {
               Login
             </button>
           </div>
-          <div className="boxes"></div>
         </div>
         {/* <Link to="/">
         <img src={back} alt="back icon" />
