@@ -1,10 +1,10 @@
 import React from "react";
-import "/src/style/sign-up.css";
+import "/src/style/login.css";
 
 function SignUp() {
   return (
     <>
-      <div className="sign-up-body">
+      <div className="login-body">
         <h1>I am trying this</h1>
         <div className="sign-up-form">
           <form action="">
