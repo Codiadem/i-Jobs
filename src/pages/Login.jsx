@@ -24,7 +24,6 @@ function Login() {
               Login
             </button>
           </div>
-          <div className="boxes"></div>
         </div>
         {/* <Link to="/">
         <img src={back} alt="back icon" />

@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Inter" sans-serif;
 }
 
 body {
@@ -9,8 +10,6 @@ body {
 }
 
 :root {
-  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
   /* Reuseable Colours */
   --darkblue: #4231a6;
   --light-grey: #e2e1e2;
@@ -40,7 +39,7 @@ body {
   display: block;
   width: 80%;
   height: 67px;
-  margin: 20px auto;
+  margin: 30px auto;
   border: none;
   border-radius: 10px;
   background-color: var(--button-colour);

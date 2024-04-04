@@ -4,24 +4,20 @@
 }
 
 .login-body {
-  min-height: 100vh;
-  margin-top: -30px;
-  /* background: linear-gradient(#5946cb, #bcb2fa); */
   background-image: url(../images/sign-up-bg.png);
+  min-height: 100vh;
 }
 
 .box {
   display: flex;
   flex-direction: column;
-  /* align-items: center;
-  justify-content: center; */
 }
-
 .boxes {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .login {
+  font-family: Inter, sans-serif;
   font-size: 48px;
   text-align: center;
   margin: 10px 0 30px;

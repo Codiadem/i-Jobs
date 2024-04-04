@@ -5,11 +5,33 @@ function SignUp() {
   return (
     <>
       <div className="login-body">
-        <h1>I am trying this</h1>
-        <div className="sign-up-form">
-          <form action="">
-            <input type="text" placeholder="First Name" required />
-          </form>
+        <div className="box">
+          <div className="boxes"></div>
+          <div className="card boxes">
+            <form action="">
+              <h1 className="login">Sign Up</h1>
+              <div className="login-input">
+                <input type="text" placeholder="First Name" required />
+                <input type="text" placeholder="Last Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="number" placeholder="Phone Number" required />
+                <input
+                  type="text"
+                  placeholder="Country of Residence"
+                  required
+                />
+                <input type="password" placeholder="Password" required />
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  required
+                />
+              </div>
+            </form>
+            <button type="submit" className="btn btn-login">
+              Sign Up
+            </button>
+          </div>
         </div>
       </div>
     </>
