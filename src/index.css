@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+:root {
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* Reuseable Colours */
+  --darkblue: #4231a6;
+  --light-grey: #e2e1e2;
+  --secondary-blue: #7f6bf8;
+  --button-colour: #a79bf0;
+  --linear-gradient: linear-gradient(#5946cb, #bcb2fa);
+
+  /* Reusable font size */
+  --headline: 4rem;
+}
+
+/* .header {
+  width: 100%;
+  background-color: var(--darkblue);
+} */
+
+.card {
+  width: 50%;
+  margin: auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 4px black;
+}
+
+.btn {
+  display: block;
+  width: 80%;
+  height: 67px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--button-colour);
+  box-shadow: 1px 2px 4px black;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* .menu {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+.menu span {
+  height: 0.4rem;
+  width: 100%;
+  color: white;
+  border-radius: 3px;
+} */
+
+/* .hamburger {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  z-index: 10;
+}
+
+.burger {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 10px;
+  background-color: white;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+} */
+
+.hamburger {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 2rem;
+}
+
+.burger {
+  height: 0.25rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 0.2rem;
+}

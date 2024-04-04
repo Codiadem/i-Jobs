@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+  color: #4231a6;
+  margin-top: 30px;
+}
+
+.main-about-box {
+  display: grid;
+  row-gap: 20px;
+}
+
+p {
+  margin: 20px auto;
+  padding: 20px;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 600;
+}
