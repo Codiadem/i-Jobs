@@ -5,8 +5,9 @@
 
 .login-body {
   min-height: 100vh;
-  /* margin: 0; */
-  background: linear-gradient(#5946cb, #bcb2fa);
+  margin-top: -30px;
+  /* background: linear-gradient(#5946cb, #bcb2fa); */
+  background-image: url(../images/sign-up-bg.png);
 }
 
 .box {
@@ -16,10 +17,14 @@
   justify-content: center; */
 }
 
+.boxes {
+  margin-top: 50px;
+}
+
 .login {
   font-size: 48px;
   text-align: center;
-  margin: 20px 0 30px;
+  margin: 10px 0 30px;
 }
 
 .login-input {

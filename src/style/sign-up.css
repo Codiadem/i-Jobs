@@ -1,4 +1,6 @@
 .sign-up-body {
-  min-height: 100vh;
-  background: linear-gradient(#5946cb, #bcb2fa);
+  background-image: url(../images/sign\ up\ background.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
