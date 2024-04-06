@@ -7,10 +7,9 @@
 .footer-box {
   background-color: #4231a6;
   color: white;
-  position: fixed;
   width: 100%;
+  position: absolute;
   bottom: 0;
-  left: 0;
 }
 
 .footer-content {
@@ -19,13 +18,12 @@
 }
 
 .footer-content h4 {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .footer-content p {
-  margin: -20px;
+  margin: 20px auto;
   font-size: 12px;
-  /* text-align: center; */
 }
 
 .footer-content a {
@@ -39,12 +37,13 @@
 }
 
 footer {
-  margin-bottom: 2rem;
+  padding: 0 2rem;
   text-align: center;
 }
 
 hr {
-  margin: 2rem 0;
+  margin: 1rem 0 20px;
+  width: 100%;
 }
 
 @media (max-width: 767px) {
