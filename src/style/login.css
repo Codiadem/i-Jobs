@@ -13,7 +13,7 @@
   flex-direction: column;
 }
 .boxes {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .login {
@@ -32,6 +32,7 @@
 .login-input input {
   width: 80%;
   height: 67px;
+  font-size: 20px;
   margin: 10px auto;
   padding: 20px;
   border: none;
@@ -50,8 +51,44 @@
   color: var(--darkblue);
   cursor: pointer;
 }
+
+/* media queries */
 @media screen and (max-width: 480px) {
+  .login {
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  .login-input input {
+    font-size: 10px;
+    padding: 7px;
+    height: 40px;
+    border-radius: 5px;
+  }
+
   .forgot-password {
-    margin: 0;
+    font-size: 10px;
+    text-align: justify;
+    margin: 4px auto;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .login {
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  .login-input input {
+    font-size: 10px;
+    padding: 10px;
+    height: 40px;
+    border-radius: 5px;
+  }
+
+  .forgot-password {
+    font-size: 10px;
+    text-align: center;
+    margin: 4px auto;
   }
 }

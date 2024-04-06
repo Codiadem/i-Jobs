@@ -10,7 +10,7 @@ function Login() {
         <div className="box">
           <div className="boxes"></div>
           <div className="card boxes">
-            <h1 className="login">Login</h1>
+            <h1 className="login">Welcome Back!</h1>
             <form action="">
               <div className="login-input">
                 <input type="email" placeholder="Email" required />

@@ -35,6 +35,10 @@ body {
   box-shadow: 0 4px 4px black;
 }
 
+.try {
+  font-size: 30px;
+}
+
 .btn {
   display: block;
   width: 80%;
@@ -49,38 +53,7 @@ body {
   cursor: pointer;
 }
 
-/* .menu {
-  flex-direction: column;
-  justify-content: space-between;
-  width: 2.25rem;
-  height: 2rem;
-}
-
-.menu span {
-  height: 0.4rem;
-  width: 100%;
-  color: white;
-  border-radius: 3px;
-} */
-
-/* .hamburger {
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: column nowrap;
-  z-index: 10;
-}
-
-.burger {
-  width: 2rem;
-  height: 0.25rem;
-  border-radius: 10px;
-  background-color: white;
-  transform-origin: 1px;
-  transition: all 0.3s linear;
-} */
-
+/* Hamburger menu styling */
 .hamburger {
   position: absolute;
   top: 0.75rem;
@@ -97,4 +70,108 @@ body {
   width: 100%;
   background-color: white;
   border-radius: 0.2rem;
+}
+
+/* media query for .card, btn */
+@media (max-width: 480px) {
+  .card {
+    width: 220px;
+  }
+  .btn {
+    height: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .card {
+    width: 450px;
+  }
+  .btn {
+    height: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+}
+/* media query for .card, btn ends */
+
+/* media query styling for hamburger menu */
+@media (max-width: 480px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    margin: 0.2rem 0.5rem;
+  }
+}
+/* Hamburger menu styling ends here */
+
+.job-box {
+  margin: 70px;
+  width: 250px;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: width height 2s;
+}
+
+.job-box:hover {
+  width: 300px;
+  height: 300px;
+}
+
+.job-circle {
+  width: 100px;
+  height: 100px;
+  background: #7f6bf8;
+  border-radius: 50%;
+  margin: -50px auto;
+  transition: width 2s;
+}
+
+.job-circle:hover {
+  width: 150x;
+  height: 150px;
+}
+
+.job-box-container {
+  display: flex;
+  overflow-x: auto;
+}
+
+.transit {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+
+.transit:hover {
+  border-radius: 6px;
+  width: 120px;
+  height: 130px;
 }
