@@ -1,9 +1,27 @@
-import React from "react";
+import { useState } from "react";
 import "/src/style/login.css";
+import { auth } from "../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import back from "/src/images/back-icon.png";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const loginUser = async (e) => {
+    e.preventDefault();
+
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/find-jobs");
+    } catch (error) {
+      setMsg("Your username or password is incorrect");
+    }
+  };
+
   return (
     <>
       <div className="login-body">
@@ -13,21 +31,28 @@ function Login() {
             <h1 className="login">Welcome Back!</h1>
             <form action="">
               <div className="login-input">
-                <input type="email" placeholder="Email" required />
-                <input type="text" placeholder="Password" required />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
               </div>
               <div className="forgot-password">
                 Forgot Password?<span> Click Here</span>
               </div>
             </form>
-            <button type="submit" className="btn btn-login">
+            <button type="submit" className="btn btn-login" onClick={loginUser}>
               Login
             </button>
           </div>
         </div>
-        {/* <Link to="/">
-        <img src={back} alt="back icon" />
-      </Link> */}
       </div>
     </>
   );

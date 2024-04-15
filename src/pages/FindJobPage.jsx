@@ -1,4 +1,4 @@
-import React from "react";
+import "../style/find-job.css";
 
 function FindJobPage() {
   return (
