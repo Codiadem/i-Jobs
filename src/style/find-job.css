@@ -1,0 +1,52 @@
+.job-box-container {
+  display: flex;
+  width: 80%;
+  overflow-x: auto;
+  margin: auto;
+  flex-wrap: nowrap;
+}
+
+.job-box-container::-webkit-scrollbar {
+  display: none;
+}
+
+.job-box {
+  margin: 70px;
+  width: 600px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 10px;
+  /* transition: width height 2s; */
+}
+
+/* .job-box:hover {
+  width: 300px;
+  height: 300px;
+} */
+
+/* .job-circle {
+  width: 100px;
+  height: 100px;
+  background: #7f6bf8;
+  border-radius: 50%;
+  margin: -50px auto;
+  transition: width 2s;
+} */
+
+.job-circle:hover {
+  width: 150x;
+  height: 150px;
+}
+
+.transit {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+
+.transit:hover {
+  border-radius: 6px;
+  width: 120px;
+  height: 130px;
+}

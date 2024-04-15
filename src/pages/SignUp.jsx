@@ -1,33 +1,44 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import Select from "react-select";
 import countryList from "react-select-country-list";
+import { auth } from "../firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 import "/src/style/login.css";
 
 function SignUp() {
-  const [email, setEmail] = useState("");
-  // const [emailmsg, setEmailMsg] = useState("");
-
-  const handleEmail = (e) => {
-    setEmail(e.target, value);
-  };
-
-  // const [value, setValue] = useState("");
-  // const options = useMemo(countryList().getData(), []);
-  // const options = useMemo(() => countryList().getData(), []);
+  const [value, setValue] = useState("");
+  const options = useMemo(() => countryList().getData(), []);
 
   const changeHandler = (value) => {
     setValue(value);
   };
 
-  // const emailValidation = () => {
-  //   const regEX = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
-  //   if (regEX.test(email)) {
-  //     setEmailMsg(null);
-  //   } else if (!regEX.test(email) && email === " ") {
-  //     setEmailMsg("Email not Valid");
-  //   }
-  // };
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [msg, setMsg] = useState("");
+
+  const navigate = useNavigate();
+
+  const signUpUser = async (e) => {
+    e.preventDefault();
+    if (password === confirmPassword) {
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        navigate("/login");
+      } catch (error) {
+        setMsg("Sorry, something went wrong. Please try again");
+        console.log(error);
+      }
+    } else {
+      setMsg("Passwords do not match. Please check and try again");
+    }
+  };
 
   return (
     <>
@@ -38,29 +49,54 @@ function SignUp() {
             <form action="">
               <h1 className="login">Sign Up</h1>
               <div className="login-input">
-                <input type="text" placeholder="First Name" required />
-                <input type="text" placeholder="Last Name" required />
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                />
                 <input
                   type="text"
                   placeholder="Email"
-                  // value={email}
-                  // onChange={handleEmail}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
-                <input type="number" placeholder="Phone Number" />
-                <input type="text" placeholder="Country of Residence" />
-                {/* <Select
+                <input
+                  type="number"
+                  placeholder="Phone Number"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                />
+                <Select
                   options={options}
                   value={value}
+                  placeholder="Country of Residence"
                   onChange={changeHandler}
-                /> */}
-                <input type="password" placeholder="Password" />
-                <input type="password" placeholder="Confirm Password" />
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                />
               </div>
             </form>
             <button
               type="submit"
               className="btn btn-login"
-              // onClick={emailValidation}
+              onClick={(e) => signUpUser(e)}
             >
               Sign Up
             </button>
