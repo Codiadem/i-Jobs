@@ -1,7 +1,16 @@
-.job-box-container {
+.array {
   width: 80%;
+  margin: 0 auto;
+}
+
+.array h3 {
+  margin: 0 0 0 4rem;
+}
+
+.job-box-container {
+  width: 100%;
   overflow-x: scroll;
-  margin: 50px auto;
+  margin: 5px auto;
   white-space: nowrap;
 }
 
