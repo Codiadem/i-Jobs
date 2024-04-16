@@ -1,4 +1,4 @@
-import React from "react";
+
 import "/src/style/footer.css";
 
 function Footer() {
@@ -34,7 +34,7 @@ function Footer() {
         </div>
         <footer>
           <hr />
-          i-Jobs &copy 2024
+          i-Jobs ©  2024
         </footer>
       </div>
     </>
