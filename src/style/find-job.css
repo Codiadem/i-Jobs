@@ -32,15 +32,132 @@
   margin: -33px auto;
 }
 
-.transit {
-  width: 100px;
-  height: 100px;
-  background: red;
-  transition: width 2s;
+.search {
+  width: 40%;
+  margin: 30px auto;
+  padding: 10px;
+  display: flex;
+  background-color: #d9d9d9;
+  border-radius: 33px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.transit:hover {
-  border-radius: 6px;
-  width: 120px;
-  height: 130px;
+.search img {
+  width: 20px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  padding-right: 20px;
+  padding-left: 40px;
+  padding: 5px 40px 5px;
+}
+
+.search button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background: transparent;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: rgb(249, 249, 249);
+}
+
+/* media query for search bar */
+@media (max-width: 975px) {
+  .search {
+    width: 560px;
+  }
+  .search input {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    padding: 4px 5px;
+  }
+  .search button {
+    padding: 0;
+    border: transparent;
+    border-radius: 0 5px 5px 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 787px) {
+  .search {
+    width: 500px;
+  }
+  .search input {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0;
+    padding: 4px 5px;
+  }
+  .search button {
+    padding: 0;
+    border: transparent;
+    border-radius: 0 5px 5px 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 570px) {
+  .search {
+    width: 400px;
+  }
+  .search input {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+    padding: 4px 5px;
+  }
+  .search button {
+    padding: 0;
+    border: transparent;
+    border-radius: 0 5px 5px 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .search {
+    width: 300px;
+  }
+  .search input {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+    padding: 4px 5px;
+  }
+  .search button {
+    padding: 0;
+    border: transparent;
+    border-radius: 0 5px 5px 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  .search {
+    width: 200px;
+  }
+  .search input {
+    font-size: 10px;
+    font-weight: 700;
+    margin: 0;
+    padding: 4px 5px;
+  }
+  .search button {
+    padding: 0;
+    border: transparent;
+    border-radius: 0 5px 5px 0;
+    margin: 0;
+  }
 }
