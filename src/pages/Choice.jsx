@@ -1,12 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Choice() {
-  const employee = (e) => {
-    e.preventDefault();
-    // const signEmployee = (e) => {
-    //   //   (is "Employee or Freelancer"? set data to db for employee : set data to db for employee)
-    // };
-  };
+  const navigate = useNavigate();
 
   return (
     <>
@@ -18,7 +14,7 @@ function Choice() {
             <button
               type="submit"
               className="btn btn-login"
-              //   onClick={signEmployee}
+              onClick={navigate("/sign-up")}
             >
               Employee or Freelancer
             </button>
