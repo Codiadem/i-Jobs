@@ -10,6 +10,7 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [msg, setMsg] = useState("");
 
   const loginUser = async (e) => {
     e.preventDefault();
@@ -48,6 +49,7 @@ function Login() {
                 Forgot Password?<span> Click Here</span>
               </div>
             </form>
+            <span className="text-error">{"" !== msg && msg}</span>
             <button type="submit" className="btn btn-login" onClick={loginUser}>
               Login
             </button>

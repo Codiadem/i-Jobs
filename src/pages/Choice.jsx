@@ -1,9 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Choice() {
-  const navigate = useNavigate();
-
   return (
     <>
       <div className="login-body">
@@ -11,16 +9,14 @@ function Choice() {
           <div className="boxes"></div>
           <div className="card boxes">
             <h1 className="login">Choose a category</h1>
-            <button
-              type="submit"
-              className="btn btn-login"
-              onClick={navigate("/sign-up")}
-            >
-              Employee or Freelancer
-            </button>
-            <button type="submit" className="btn btn-login">
-              Recruiter
-            </button>
+            <Link to="/sign-up">
+              <button type="submit" className="btn btn-login">
+                Employee or Freelancer
+              </button>
+              <button type="submit" className="btn btn-login">
+                Recruiter
+              </button>
+            </Link>
           </div>
         </div>
       </div>
