@@ -1,4 +1,3 @@
-
 // eslint-disable-next-line no-unused-vars
 import Footer from "../components/Footer";
 // eslint-disable-next-line no-unused-vars
@@ -6,8 +5,8 @@ import React from "react";
 
 // eslint-disable-next-line no-unused-vars
 import "../style/home.css";
-import hero from "../images/Hero-image.png"
-import {Link} from "react-router-dom"
+import hero from "../images/Hero-image.png";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -76,14 +75,11 @@ function Home() {
               Find important resources to help your career growth.
             </p>
           </div>
-
-          {/* </div> */}
         </div>
       </body>
-      <Footer/>
+      <Footer />
     </>
   );
 }
 
 export default Home;
-
