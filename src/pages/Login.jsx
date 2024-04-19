@@ -3,7 +3,7 @@ import "/src/style/login.css";
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import back from "/src/images/back-icon.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
