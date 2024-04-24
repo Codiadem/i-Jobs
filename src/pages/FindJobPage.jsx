@@ -1,6 +1,8 @@
 import Footer from "../components/Footer";
 import "../style/find-job.css";
 import search from "../images/search-glass.png";
+import LatestRemote from "../components/LatestRemote";
+import FullyRemote from "../components/FullyRemote";
 
 function FindJobPage() {
   return (
@@ -13,64 +15,12 @@ function FindJobPage() {
       </div>
       <div className="array">
         <h3>Latest Remote Jobs</h3>
-        <div className="job-box-container">
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-        </div>
+        <LatestRemote />
       </div>
-      <div className="array">
-        <h3>Latest Fully remote Jobs</h3>
-        <div className="job-box-container">
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-        </div>
-      </div>
-      <div className="array">
-        <h3>Latest Onsite Jobs</h3>
-        <div className="job-box-container">
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-          <div className="job-box">
-            <div className="job-circle"></div>
-          </div>
-        </div>
-      </div>
+      {/* <div className="array">
+        <h3>Latest Fully Remote Jobs</h3>
+        <FullyRemote />
+      </div> */}
       <Footer />
     </>
   );
