@@ -11,9 +11,14 @@
 .box {
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
 }
 .boxes {
   margin-top: 50px;
+}
+
+.card a {
+  text-decoration: none;
 }
 
 .login {

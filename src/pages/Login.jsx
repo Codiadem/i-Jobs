@@ -3,13 +3,14 @@ import "/src/style/login.css";
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import back from "/src/images/back-icon.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [msg, setMsg] = useState("");
 
   const loginUser = async (e) => {
     e.preventDefault();
@@ -48,6 +49,7 @@ function Login() {
                 Forgot Password?<span> Click Here</span>
               </div>
             </form>
+            <span className="text-error">{"" !== msg && msg}</span>
             <button type="submit" className="btn btn-login" onClick={loginUser}>
               Login
             </button>
