@@ -1,4 +1,5 @@
 import React from "react";
+import star from "../../images/star.png";
 
 function JobData1({ job }) {
   const truncateText = (text, maxLength) => {
@@ -21,7 +22,7 @@ function JobData1({ job }) {
           </div>
           <div className="job-ago">
             <div className="day">{job.jobAgo}</div>
-            <img src="" alt="star" />
+            <img src={star} alt="star" />
           </div>
         </div>
       </div>

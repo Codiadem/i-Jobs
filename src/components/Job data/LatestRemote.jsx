@@ -1,6 +1,6 @@
 import React from "react";
 import JobData1 from "./JobData1";
-import latestRemoteData from "../latest-remote-data";
+import latestRemoteData from "../../latest-remote-data";
 
 function LatestRemote() {
   return (

@@ -1,6 +1,11 @@
 import React from "react";
+import star from "../../images/star.png";
 
 function JobData2({ full }) {
+  const truncateText = (text, maxLength) => {
+    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
+  };
+
   return (
     <>
       <div className="job-box">
@@ -17,7 +22,7 @@ function JobData2({ full }) {
           </div>
           <div className="job-ago">
             <div className="day">{full.jobAgo}</div>
-            <img src="" alt="star" />
+            <img src={star} alt="star" />
           </div>
         </div>
       </div>

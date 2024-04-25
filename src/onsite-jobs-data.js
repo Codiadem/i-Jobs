@@ -45,3 +45,5 @@ const onsiteJobs = [
     jobAgo: "10 days ago",
   },
 ];
+
+export default onsiteJobs;
