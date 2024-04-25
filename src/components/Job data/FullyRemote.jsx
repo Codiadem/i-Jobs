@@ -1,6 +1,6 @@
 import React from "react";
 import JobData2 from "./JobData2";
-import fullyRemote from "../fully-remote-data";
+import fullyRemote from "../../fully-remote-data";
 
 function FullyRemote() {
   return (

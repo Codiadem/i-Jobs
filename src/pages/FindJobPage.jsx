@@ -1,8 +1,9 @@
 import Footer from "../components/Footer";
 import "../style/find-job.css";
 import search from "../images/search-glass.png";
-import LatestRemote from "../components/LatestRemote";
-import FullyRemote from "../components/FullyRemote";
+import LatestRemote from "../components/Job data/LatestRemote";
+import FullyRemote from "../components/Job data/FullyRemote";
+import LatestOnsite from "../components/Job data/LatestOnsite";
 
 function FindJobPage() {
   return (
@@ -17,10 +18,14 @@ function FindJobPage() {
         <h3>Latest Remote Jobs</h3>
         <LatestRemote />
       </div>
-      {/* <div className="array">
+      <div className="array">
         <h3>Latest Fully Remote Jobs</h3>
         <FullyRemote />
-      </div> */}
+      </div>
+      <div className="array">
+        <h3>Latest Onsite Jobs</h3>
+        <LatestOnsite />
+      </div>
       <Footer />
     </>
   );
